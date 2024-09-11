@@ -56,9 +56,7 @@ class _NewExpenseState extends State<NewExpense> {
                           'Okay',
                           style: Theme.of(context).textTheme.titleMedium,
                         ))
-                  ]
-                )
-        );
+                  ]));
     } else {
       showDialog(
           context: context,
@@ -226,23 +224,24 @@ class _NewExpenseState extends State<NewExpense> {
                       const SizedBox(
                         width: 16,
                       ),
-                      Expanded(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text(
-                              _selectedDate == null
-                                  ? 'No Date Selected'
-                                  : formatter.format(_selectedDate!),
-                              style: Theme.of(context).textTheme.titleMedium,
-                            ),
-                            IconButton(
-                                onPressed: _presentDatePicker,
-                                icon: const Icon(Icons.calendar_month))
-                          ],
-                        ),
-                      )
+                      //Expanded(
+                      //child:
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            _selectedDate == null
+                                ? 'No Date Selected'
+                                : formatter.format(_selectedDate!),
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          IconButton(
+                              onPressed: _presentDatePicker,
+                              icon: const Icon(Icons.calendar_month))
+                        ],
+                      ),
+                      //)
                     ],
                   ),
                 const SizedBox(
